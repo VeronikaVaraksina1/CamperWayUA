@@ -1,7 +1,10 @@
-export const Header = () => {
+import { Navigation } from "../Navigation/Navigation";
+
+export const Header = ({ children }) => {
   return (
     <header>
-      <nav></nav>
+      <Navigation />
+      {children}
     </header>
   )
 };
