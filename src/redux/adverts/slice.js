@@ -13,7 +13,7 @@ const handleRejected = (state, action) => {
 const advertsSlice = createSlice({
   name: "adverts",
   initialState: {
-    adverts: [],
+    items: [],
     loading: false,
     error: false,
   },
@@ -21,7 +21,7 @@ const advertsSlice = createSlice({
     builder.addCase(fetchAdverts.pending, handlePending).addCase(fetchAdverts.fulfilled, (state, action) =>{
       state.loading = false;
       state.error = null;
-      state.adverts = action.payload.adverts;
+      state.items = action.payload;
     }).addCase(fetchAdverts.rejected, handleRejected)
   }
 });

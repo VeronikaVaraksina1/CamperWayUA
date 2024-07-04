@@ -13,6 +13,8 @@
 
   --white: #fff;
   --black: #101828;
+  --gray: #f2f4f7;
+  --red: #e44848;
 }
 
 *,
@@ -57,6 +59,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 input,

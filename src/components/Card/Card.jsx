@@ -1,46 +1,55 @@
-import css from "./Card.module.css"
+import css from "./Card.module.css";
 import icons from "../../images/icons.svg";
 import { Button } from "../Button/Button";
+import { CatalogDetails } from "../CatalogDetails/CatalogDetails";
 
-export const Card = () => {
+export const Card = ({ data }) => {
+  const {name,
+    price,
+    rating,
+    location,
+    description,
+    details,
+    gallery,
+    reviews,
+  } = data;
+
   return (
     <div className={css.wrapper}>
-      <img />
-      <div>
+      <img className={css.image} src={gallery[0]} />
+      <div className={css.about}>
         <div>
-          <h2>Mavericks</h2>
-          <div>
-            <p>€8000.00</p>
+        <div className={css.title}>
+          <h2>{name}</h2>
+          <div className={css.price}>
+            <p>{`€${price}.00`}</p>
             <button>
               <svg width={18} height={18}>
                 <use href={`${icons}#icon-heart`}></use>
               </svg>
             </button>
           </div>
-          <div>
-            <p>
-              <span>
-                <svg width={18} height={18}>
-                  <use href={`${icons}#icon-rating`}></use>
-                </svg>
-              </span>
-              4.4(2 Reviews)
-            </p>
-            <p>
-              <span>
-                <svg width={18} height={18}>
-                  <use href={`${icons}#icon-map-pin`}></use>
-                </svg>
-              </span>
-              Kyiv, Ukraine
-            </p>
-          </div>
-          <p>
-            Embrace simplicity and freedom with the Mavericks panel truck, an id
-          </p>
-          <h3>Categories</h3>
-          <Button type="button">Show more</Button>
         </div>
+        <div className={css.ratingContainer}>
+          <p className={css.rating}>
+              <svg className={css.icon} width={16} height={16}>
+                <use href={`${icons}#icon-rating`}></use>
+              </svg>
+            {`${rating}(${reviews.length} Reviews)`}
+          </p>
+          <p className={css.location}>
+            <svg className={css.icon} width={16} height={16}>
+              <use href={`${icons}#icon-map-pin`}></use>
+            </svg>
+            {location}
+          </p>
+        </div>
+        </div>
+        <p className={css.description}>{description}</p>
+
+        <CatalogDetails data={data} details={details} />
+
+        <Button type="button">Show more</Button>
       </div>
     </div>
   );

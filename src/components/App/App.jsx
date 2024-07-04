@@ -6,8 +6,10 @@ import { CatalogPage } from '../../pages/CatalogPage/CatalogPage.jsx'
 import { FavoritesPage } from '../../pages/FavoritesPage/FavoritesPage.jsx'
 import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage.jsx'
 
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router";
+import { useDispatch } from "react-redux";
+import { fetchAdverts } from "../../redux/adverts/operations.js";
 
 // const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 // const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
@@ -15,6 +17,12 @@ import { Route, Routes } from "react-router";
 // const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage"));
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAdverts()).unwrap().catch((error) => console.log(error.message));
+  }, [dispatch]);
+
   return (
     <div>
       <Header>
