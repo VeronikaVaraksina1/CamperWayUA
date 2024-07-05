@@ -28,10 +28,10 @@ function App() {
       <Header>
         <Suspense fallback="...Loading">
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/catalog" element={<CatalogPage />}></Route>
-            <Route path="/favorites" element={<FavoritesPage />}></Route>
-            <Route path="*" element={<NotFoundPage />}></Route>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
       </Header>

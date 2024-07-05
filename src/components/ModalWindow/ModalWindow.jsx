@@ -1,4 +1,5 @@
 import icons from "../../images/icons.svg";
+import { OrderForm } from "../OrderForm/OrderForm";
 import css from "./ModalWindow.module.css";
 import Modal from "react-modal";
 
@@ -57,6 +58,8 @@ export const ModalWindow = ({
         </ul>
 
         <p className={css.description}>{description}</p>
+
+        <OrderForm />
       </Modal>
     </div>
   );
