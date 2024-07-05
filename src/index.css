@@ -13,8 +13,25 @@
 
   --white: #fff;
   --black: #101828;
+  --grayscale: #525252;
   --gray: #f2f4f7;
   --red: #e44848;
+  --light-red: #f46363;
+  --dark-blue: #475467;
+  --overlay: rgba(16, 24, 40, 0.2);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
 }
 
 *,

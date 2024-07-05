@@ -35,7 +35,6 @@ export const CatalogDetails = ({ data, details }) => {
     filteredDetails.AC = airConditioner;
   }
 
-  console.log(filteredDetails);
   const itemList = Object.entries(filteredDetails);
 
   return (

@@ -27,7 +27,35 @@
 
 .price {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+}
+
+.title > h2, .price > h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+  border: transparent;
+  background-color: transparent;
+  outline: transparent;
+
+  fill: none;
+  stroke: var(--black);
+  transition: fill 100ms ease-in, stroke 100ms ease-in;
+}
+
+.button:hover, .button:focus {
+  stroke: var(--grayscale);
 }
 
 .ratingContainer {
@@ -44,9 +72,22 @@
   margin-right: 4px;
 }
 
+.favorites {
+  fill: var(--red);
+  stroke: var(--red);
+  transition: fill 100ms ease-in, stroke 100ms ease-in;
+}
+
+.favorites:hover, .favorites:focus {
+  fill: var(--light-red);
+  stroke: var(--light-red);
+}
+
 .description {
   width: 525px;
   height: 24px;
+
+  color: var(--dark-blue);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

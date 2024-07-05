@@ -1,0 +1,43 @@
+.icon {
+  fill: var(--black);
+  stroke: var(--black);
+}
+
+.list {
+  display: flex;
+  gap: 16px;
+
+  width: 100%;
+
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: #e8e8e8;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: rgba(22, 22, 22, 0.1);
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(22, 22, 22, 0.2);
+}
+
+.item {
+  flex: 0 0 auto;
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -4,11 +4,16 @@
   padding: 16px 40px;
   border: transparent;
   border-radius: 200px;
-
+  outline: transparent;
   background-color: var(--red);
+  transition: background-color 250ms ease-in;
 
   color: var(--white);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.01em;
+}
+
+.button:hover, .button:focus {
+  background-color: var(--light-red);
 }
