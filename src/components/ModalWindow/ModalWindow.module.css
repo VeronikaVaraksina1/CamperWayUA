@@ -1,6 +1,88 @@
-.icon {
+.modalWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  position: absolute;
+  max-width: 982px;
+  max-height: 90%;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  padding: 40px;
+  border-radius: 20px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  overflow-y: auto;
+}
+
+.modal::-webkit-scrollbar {
+  width: 0;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 110px;
+  margin-bottom: 24px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonClose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
+  transition: fill 100ms ease-in, stroke 100ms ease-in;
+
   fill: var(--black);
   stroke: var(--black);
+}
+
+.buttonClose:hover, .buttonClose:focus {
+  fill: var(--grayscale);
+  stroke: var(--grayscale);
+}
+
+.title > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.ratingContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.rating, .location {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .list {
@@ -10,7 +92,8 @@
   width: 100%;
 
   overflow-x: auto;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .list::-webkit-scrollbar {
@@ -39,5 +122,9 @@
   width: 290px;
   height: 310px;
   border-radius: 10px;
-  object-fit: cover;
+}
+
+.description {
+  text-align: justify;
+  margin-bottom: 44px;
 }
