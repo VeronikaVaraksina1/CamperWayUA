@@ -9,11 +9,17 @@ export const Details = ({ data }) => {
     children,
     transmission,
     engine,
+    AC: details.airConditioner,
   };
 
   const vehicleDetails = {
-    form, length, width, height, tank, consumption,
-  }
+    form,
+    length,
+    width,
+    height,
+    tank,
+    consumption,
+  };
 
   const itemList = Object.entries(filteredDetails);
   const detailsList = Object.entries(details);
@@ -30,7 +36,12 @@ export const Details = ({ data }) => {
               </svg>
               {key === "adults" || key === "children"
                 ? `${values} ${key}`
-                : `${key}`}
+                : key === "engine"
+                ? String(values)
+                    .charAt(0)
+                    .toUpperCase()
+                    .concat(String(values).slice(1))
+                : `${key.charAt(0).toUpperCase().concat(key.slice(1))}`}
             </p>
           </li>
         ))}
@@ -43,7 +54,9 @@ export const Details = ({ data }) => {
               </svg>
               {key === "gas" || key === "water"
                 ? `${values} of ${key}`
-                : `${values} ${key}`}
+                : key === "airConditioner"
+                ? `${values} air conditioner`
+                : key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) :`${values} ${key}`}
             </p>
           </li>
         ))}

@@ -53,8 +53,8 @@ export const ModalWindow = ({
         </div>
 
         <ul className={css.list}>
-          {gallery.map((image) => (
-            <li className={css.item} key={image}>
+          {gallery.map((image, index) => (
+            <li className={css.item} key={`${image} ${index}`}>
               <img className={css.image} src={image} />
             </li>
           ))}

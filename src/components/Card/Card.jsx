@@ -10,7 +10,7 @@ import { useState } from "react";
 import { ModalWindow } from "../ModalWindow/ModalWindow";
 
 export const Card = ({ data }) => {
-  const { _id, name, price, rating, location, description, details, gallery, reviews } = data;
+  const { _id, name, price, rating, location, description, gallery, reviews } = data;
 
   const favoriteAdverts = useSelector(selectFavoriteAdverts);
   const dispatch = useDispatch();

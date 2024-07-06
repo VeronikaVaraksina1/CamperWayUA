@@ -35,6 +35,10 @@
   opacity: 0;
 }
 
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {

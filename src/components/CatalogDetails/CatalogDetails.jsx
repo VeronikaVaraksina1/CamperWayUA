@@ -44,7 +44,11 @@ export const CatalogDetails = ({ data }) => {
           <svg width={18} height={18}>
             <use href={`${icons}#icon-${key}`}></use>
           </svg>
-          <p>{key === "adults" || key === "beds" ? `${values} ${key}` : key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) : values.charAt(0).toUpperCase().concat(values.slice(1))}</p>
+          <p>{key === "adults" || key === "beds" ? `${values} ${key}` : key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) : key === "engine"
+                ? String(values)
+                    .charAt(0)
+                    .toUpperCase()
+                    .concat(String(values).slice(1)) : values.charAt(0).toUpperCase().concat(values.slice(1))}</p>
         </li>
       ))}
     </ul>
