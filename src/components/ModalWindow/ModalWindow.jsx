@@ -6,7 +6,7 @@ import Modal from "react-modal";
 
 export const ModalWindow = ({
   value: data, isOpen, onClose }) => {
-  const  {_id, name, price, rating, location, description, details, gallery, reviews } = data;
+  const  {name, price, rating, location, description, gallery, reviews } = data;
 
   const customStyles = {
     overlay: {

@@ -26,7 +26,7 @@ export const Details = ({ data }) => {
   const vehicleDetailsList = Object.entries(vehicleDetails);
 
   return (
-    <div>
+    <div className={css.wrapper}>
       <ul className={css.list}>
         {itemList.map(([key, values], index) => (
           <li key={`${key}-${index}`}>
@@ -62,17 +62,19 @@ export const Details = ({ data }) => {
         ))}
       </ul>
 
+      <div className={css.titleContainer}>
       <h3 className={css.title}>Vehicle details</h3>
-      <ul>
-        {vehicleDetailsList.map(([key, values], index) => (
-          <li key={`${key}-${index}`}>
-            <div className={css.vehicleDetailsContainer}>
-              <p>{key.charAt(0).toUpperCase().concat(key.slice(1))}</p>
-              <p>{values}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+        <ul className={css.vehicleDetailsList}>
+          {vehicleDetailsList.map(([key, values], index) => (
+            <li key={`${key}-${index}`}>
+              <div className={css.vehicleDetailsContainer}>
+                <p className={css.vehicleDetails}>{key.charAt(0).toUpperCase().concat(key.slice(1))}</p>
+                <p className={css.vehicleDetails}>{values}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .wrapper {
   flex-shrink: 0;
   width: 448px;
+  height: 532px;
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: 10px;

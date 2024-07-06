@@ -11,10 +11,10 @@ import { Route, Routes } from "react-router";
 import { useDispatch } from "react-redux";
 import { fetchAdverts } from "../../redux/adverts/operations.js";
 
-// const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
-// const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
-// const FavoritesPage = lazy(() => import("../../pages/FavoritesPage/FavoritesPage"));
-// const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage"));
+// const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
+// const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage.jsx"));
+// const FavoritesPage = lazy(() => import("../../pages/FavoritesPage/FavoritesPage.jsx"));
+// const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage.jsx"));
 
 function App() {
   const dispatch = useDispatch();
