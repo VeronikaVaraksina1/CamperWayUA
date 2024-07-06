@@ -1,10 +1,13 @@
 import icons from "../../images/icons.svg";
+import { Details } from "../Details/Details";
 import { OrderForm } from "../OrderForm/OrderForm";
 import css from "./ModalWindow.module.css";
 import Modal from "react-modal";
 
 export const ModalWindow = ({
-  value: { _id, name, price, rating, location, description, details, gallery, reviews }, isOpen, onClose }) => {
+  value: data, isOpen, onClose }) => {
+  const  {_id, name, price, rating, location, description, details, gallery, reviews } = data;
+
   const customStyles = {
     overlay: {
       backgroundColor: "var(--overlay)",
@@ -58,8 +61,12 @@ export const ModalWindow = ({
         </ul>
 
         <p className={css.description}>{description}</p>
+        
+        <div className={css.detailsContainer}>
+          <Details data={data} />
+          <OrderForm />
+        </div>
 
-        <OrderForm />
       </Modal>
     </div>
   );

@@ -1,3 +1,5 @@
+import css from "./DetailsItem.module.css"
+
 export const DetailsItem = ({ children }) => {
-  return <p>{children}</p>;
+  return <p className={css.item}>{children}</p>;
 };

@@ -1,3 +1,9 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .item {
   display: flex;
   justify-content: center;
@@ -11,4 +17,12 @@
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
+
+  fill: none;
+  stroke: var(--black);
+}
+
+.vehicleDetailsContainer {
+  display: flex;
+  justify-content: space-between;
 }

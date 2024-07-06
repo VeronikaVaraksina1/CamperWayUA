@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import css from "./Input.module.css"
 
-export const Input = ({ ...props }) => {
+export const Input = ({ className, ...props }) => {
   return (
-    <input className={css.input} {...props} />
+    <input className={clsx(css.input, className)} {...props} />
   )
 };

@@ -1,8 +1,8 @@
 import css from "./CatalogDetails.module.css";
 import icons from "../../images/icons.svg";
 
-export const CatalogDetails = ({ data, details }) => {
-  const { adults, transmission, engine } = data;
+export const CatalogDetails = ({ data }) => {
+  const { adults, transmission, engine, details } = data;
   const { kitchen, beds, airConditioner } = details;
 
   // const filteredDetails = {
@@ -44,7 +44,7 @@ export const CatalogDetails = ({ data, details }) => {
           <svg width={18} height={18}>
             <use href={`${icons}#icon-${key}`}></use>
           </svg>
-          {key === "adults" || key === "beds" ? `${values} ${key}` : key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) : values.charAt(0).toUpperCase().concat(values.slice(1))}
+          <p>{key === "adults" || key === "beds" ? `${values} ${key}` : key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) : values.charAt(0).toUpperCase().concat(values.slice(1))}</p>
         </li>
       ))}
     </ul>

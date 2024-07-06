@@ -10,13 +10,13 @@ import { useState } from "react";
 import { ModalWindow } from "../ModalWindow/ModalWindow";
 
 export const Card = ({ data }) => {
-  const  {_id, name, price, rating, location, description, details, gallery, reviews } = data;
+  const { _id, name, price, rating, location, description, details, gallery, reviews } = data;
 
   const favoriteAdverts = useSelector(selectFavoriteAdverts);
   const dispatch = useDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [content, setContent] = useState({_id, name, price, rating, location, description, details, gallery, reviews});
+  const [content, setContent] = useState(data);
 
   const isFavorite = favoriteAdverts.some(item => item._id === _id);
 
@@ -70,7 +70,7 @@ export const Card = ({ data }) => {
         </div>
         <p className={css.description}>{description}</p>
 
-        <CatalogDetails data={data} details={details} />
+        <CatalogDetails data={data} />
 
         <Button type={"button"} onClick={() => openModal(content)}>Show more</Button>
 

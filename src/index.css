@@ -19,6 +19,7 @@
   --light-red: #f46363;
   --dark-blue: #475467;
   --overlay: rgba(16, 24, 40, 0.2);
+  --border: rgba(16, 24, 40, 0.2);
 }
 
 .ReactModal__Overlay {
