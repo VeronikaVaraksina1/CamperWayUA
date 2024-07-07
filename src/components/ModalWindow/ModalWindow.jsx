@@ -1,6 +1,5 @@
 import icons from "../../images/icons.svg";
-import { Details } from "../Details/Details";
-import { OrderForm } from "../OrderForm/OrderForm";
+import { Features } from "../Features/Features";
 import css from "./ModalWindow.module.css";
 import Modal from "react-modal";
 
@@ -62,10 +61,7 @@ export const ModalWindow = ({
 
         <p className={css.description}>{description}</p>
         
-        <div className={css.detailsContainer}>
-          <Details data={data} />
-          <OrderForm />
-        </div>
+          <Features data={data} />
 
       </Modal>
     </div>

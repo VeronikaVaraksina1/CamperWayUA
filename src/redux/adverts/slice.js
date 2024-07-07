@@ -10,16 +10,11 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-const getFavorites = () => {
-  const favorites = localStorage.getItem("favorites");
-  return favorites ? JSON.parse(favorites) : []
-}
-
 const advertsSlice = createSlice({
   name: "adverts",
   initialState: {
     items: [],
-    favorites: getFavorites(),
+    favorites: [],
     loading: false,
     error: false,
   },

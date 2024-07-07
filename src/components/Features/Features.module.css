@@ -1,0 +1,4 @@
+.detailsContainer {
+  display: flex;
+  gap: 24px;
+}
