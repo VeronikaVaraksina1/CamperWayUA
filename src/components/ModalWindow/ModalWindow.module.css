@@ -1,9 +1,3 @@
-/* .modalWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-} */
-
 .modal {
   position: absolute;
   max-width: 982px;
@@ -71,6 +65,11 @@
   gap: 16px;
 }
 
+.rating {
+  fill: #ffc531;
+  stroke: #ffc531;
+}
+
 .rating, .location {
   display: flex;
   align-items: center;
@@ -128,4 +127,47 @@
 .description {
   text-align: justify;
   margin-bottom: 44px;
+}
+
+.buttonContainer {
+  display: flex;
+  position: relative;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+.buttonContainer::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: var(--border);
+}
+
+.buttonSection {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+
+  padding-bottom: 24px;
+  border: transparent;
+  border-bottom: 5px solid transparent;
+  outline: transparent;
+  background-color: transparent;
+}
+
+.isActiveButton {
+  border-bottom: 5px solid var(--red);
+}
+
+.features, .reviews {
+  display: none;
+}
+
+.isActive {
+  display: block;
 }

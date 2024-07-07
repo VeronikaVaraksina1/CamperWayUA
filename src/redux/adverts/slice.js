@@ -35,7 +35,7 @@ const advertsSlice = createSlice({
     builder.addCase(fetchAdverts.pending, handlePending).addCase(fetchAdverts.fulfilled, (state, action) =>{
       state.loading = false;
       state.error = null;
-      state.items = action.payload;
+      state.items = [...state.items, ...action.payload];
     }).addCase(fetchAdverts.rejected, handleRejected)
   }
 });

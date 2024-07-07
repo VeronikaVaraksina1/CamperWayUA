@@ -4,7 +4,7 @@ import { OrderForm } from "../OrderForm/OrderForm";
 
 export const Features = ({ data }) => {
   return (
-    <div className={css.detailsContainer}>
+    <div className={css.container}>
       <Details data={data} />
       <OrderForm />
     </div>

@@ -1,4 +1,4 @@
-import "./App.module.css";
+import css from "./App.module.css";
 
 import { Header } from "../Header/Header.jsx";
 import { HomePage } from '../../pages/HomePage/HomePage.jsx'
@@ -10,6 +10,7 @@ import { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import { useDispatch } from "react-redux";
 import { fetchAdverts } from "../../redux/adverts/operations.js";
+import { Loader } from "../Loader/Loader.jsx";
 
 // const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 // const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage.jsx"));
@@ -17,16 +18,10 @@ import { fetchAdverts } from "../../redux/adverts/operations.js";
 // const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage.jsx"));
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchAdverts()).unwrap().catch((error) => console.log(error.message));
-  }, [dispatch]);
-
   return (
-    <div>
+    <div className={css.app}>
       <Header>
-        <Suspense fallback="...Loading">
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/catalog" element={<CatalogPage />} />

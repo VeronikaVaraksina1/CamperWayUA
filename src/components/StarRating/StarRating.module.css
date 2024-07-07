@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 4px;
+}
+
+.noFilled {
+  fill: var(--gray);
+  stroke: var(--gray);
+}
+
+.filled {
+  fill: #ffc531;
+  stroke: #ffc531;
+}

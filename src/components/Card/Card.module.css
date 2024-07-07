@@ -63,6 +63,11 @@
   gap: 16px;
 }
 
+.rating {
+  fill: #ffc531;
+  stroke: #ffc531;
+}
+
 .rating, .location {
   display: flex;
   align-items: center;

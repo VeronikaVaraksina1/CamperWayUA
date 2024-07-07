@@ -1,0 +1,49 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.userContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: var(--gray);
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--red);
+}
+
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nameContainer > h5 {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.comment {
+  color: var(--dark-blue);
+}

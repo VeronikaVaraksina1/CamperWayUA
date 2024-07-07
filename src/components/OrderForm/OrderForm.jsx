@@ -56,8 +56,10 @@ export const OrderForm = () => {
     };
   }, [isCalendarOpen]);
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, event) => {
+    event.preventDefault();
     console.log(data);
+    event.target.submit();
   }
 
   return (
@@ -68,25 +70,26 @@ export const OrderForm = () => {
       </p>
 
       <form className={css.form} onSubmit={handleSubmit(onSubmit)}>
-        <div>
+        <div className={css.inputContainer}>
           <input className={css.input} type="text" name="name" placeholder="Name" aria-label="Enter your name" {...register("name")}/>
           {errors?.name && (<FormErrorMessages>{errors.name.message}</FormErrorMessages>)}
         </div>
 
-        <div>
+        <div className={css.inputContainer}>
           <input className={css.input} type="email" name="email" placeholder="Email" aria-label="Enter your email" {...register("email")}/>
           {errors?.email && (<FormErrorMessages>{errors.email.message}</FormErrorMessages>)}
         </div>
 
-        <label className={css.label}>
-          <input className={css.input} type="text" name="date" placeholder="Booking date" aria-label="Select the booking date" readOnly value={formatDate(calendarValue)} {...register("calendar")} />
+        <div className={css.inputContainer}>
+          <label className={css.label}>
+            <input className={css.input} type="text" name="date" placeholder="Booking date" aria-label="Select the booking date" readOnly value={formatDate(calendarValue)} {...register("date")} />
+            <button className={css.buttonCalendar} onClick={handleOpenCalendar} type="button">
+              <svg className={css.icon} width={20} height={20}>
+                <use href={`${icons}#icon-calendar`}></use>
+              </svg>
+            </button>
+          </label>
           {errors?.date && (<FormErrorMessages>{errors.date.message}</FormErrorMessages>)}
-          <button className={css.buttonCalendar} onClick={handleOpenCalendar} type="button">
-            <svg className={css.icon} width={20} height={20}>
-              <use href={`${icons}#icon-calendar`}></use>
-            </svg>
-          </button>
-        </label>
 
         {isCalendarOpen && (
           <div ref={calendarRef}>
@@ -96,9 +99,10 @@ export const OrderForm = () => {
               value={calendarValue}
               minDate={new Date()}
               locale="en-US"
-            />
+              />
           </div>
         )}
+        </div>
 
         <div>
           <textarea
