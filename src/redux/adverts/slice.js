@@ -32,10 +32,14 @@ const advertsSlice = createSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase(fetchAdverts.pending, handlePending).addCase(fetchAdverts.fulfilled, (state, action) =>{
+    builder.addCase(fetchAdverts.pending, handlePending).addCase(fetchAdverts.fulfilled, (state, action) => {
       state.loading = false;
       state.error = null;
-      state.items = [...state.items, ...action.payload];
+      if (action.meta.arg.page === 1) {
+        state.items = action.payload;
+      } else {
+        state.items = [...state.items, ...action.payload];
+      }
     }).addCase(fetchAdverts.rejected, handleRejected)
   }
 });

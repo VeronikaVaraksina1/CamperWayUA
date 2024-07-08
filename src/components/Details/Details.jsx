@@ -4,13 +4,15 @@ import icons from "../../images/icons.svg";
 export const Details = ({ data }) => {
   const { adults, children, transmission, engine, details, form, length, width, height, tank, consumption } = data;
 
-  const filteredDetails = {
+  const filteredItems = {
     adults,
-    children,
     transmission,
     engine,
-    AC: details.airConditioner,
   };
+
+  if (children !== 0) {
+    filteredItems.children = children;
+  }
 
   const vehicleDetails = {
     form,
@@ -21,7 +23,7 @@ export const Details = ({ data }) => {
     consumption,
   };
 
-  const itemList = Object.entries(filteredDetails);
+  const itemList = Object.entries(filteredItems);
   const detailsList = Object.entries(details);
   const vehicleDetailsList = Object.entries(vehicleDetails);
 
@@ -78,5 +80,3 @@ export const Details = ({ data }) => {
     </div>
   );
 };
-
-// key === "kitchen" || key === "AC" ? key.charAt(0).toUpperCase().concat(key.slice(1)) : String(values).charAt(0).toUpperCase().concat(String(values).slice(1))

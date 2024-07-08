@@ -6,10 +6,8 @@ import { CatalogPage } from '../../pages/CatalogPage/CatalogPage.jsx'
 import { FavoritesPage } from '../../pages/FavoritesPage/FavoritesPage.jsx'
 import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage.jsx'
 
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 import { Route, Routes } from "react-router";
-import { useDispatch } from "react-redux";
-import { fetchAdverts } from "../../redux/adverts/operations.js";
 import { Loader } from "../Loader/Loader.jsx";
 
 // const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));

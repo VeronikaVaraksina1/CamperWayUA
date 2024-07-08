@@ -5,26 +5,12 @@ export const CatalogDetails = ({ data }) => {
   const { adults, transmission, engine, details } = data;
   const { kitchen, beds, airConditioner } = details;
 
-  // const filteredDetails = {
-  //   adults,
-  //   transmission,
-  //   engine,
-  //   kitchen,
-  //   beds,
-  //   AC: airConditioner,
-  // };
+  const filteredDetails = {
+    adults,
+    transmission,
+    engine,
+  };
 
-  const filteredDetails = {};
-
-  if (adults !== 0) {
-    filteredDetails.adults = adults;
-  }
-  if (transmission !== 0) {
-    filteredDetails.transmission = transmission;
-  }
-  if (engine !== 0) {
-    filteredDetails.engine = engine;
-  }
   if (kitchen !== 0) {
     filteredDetails.kitchen = kitchen;
   }
