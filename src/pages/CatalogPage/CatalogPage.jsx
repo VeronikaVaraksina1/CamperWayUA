@@ -27,7 +27,7 @@ export const CatalogPage = () => {
   };
 
   return(
-    <div>
+    <div className={css.wrapper}>
       <CardList />
       <Button className={clsx(loadMore ? css.isShow : css.isHide)} type={"button"} onClick={handleLoadMore}>Load More</Button>
     </div>

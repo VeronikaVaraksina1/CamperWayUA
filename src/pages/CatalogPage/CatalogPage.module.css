@@ -1,3 +1,8 @@
+.wrapper {
+  padding-top: 88px;
+  padding-bottom: 70px;
+}
+
 button.isShow {
   display: block;
   border: 1px solid var(--border);
@@ -9,7 +14,7 @@ button.isShow {
 }
 
 button.isShow:hover, button.isShow:focus {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--red);
   background-color: var(--white);
 }
 

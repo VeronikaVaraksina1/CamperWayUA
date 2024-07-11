@@ -51,7 +51,7 @@
   position: absolute;
   top: 0;
   right: 18px;
-  z-index: 998;
+  z-index: 9;
 
   width: 20px;
   height: 20px;
@@ -73,7 +73,7 @@
   position: absolute;
   bottom: 18px;
   left: 108px;
-  z-index: 999;
+  z-index: 9;
   border: 1px solid var(--border) !important;
   border-radius: 10px !important;
   overflow: hidden;

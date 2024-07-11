@@ -1,14 +1,15 @@
 import css from "./App.module.css";
 
 import { Header } from "../Header/Header.jsx";
-import { HomePage } from '../../pages/HomePage/HomePage.jsx'
-import { CatalogPage } from '../../pages/CatalogPage/CatalogPage.jsx'
-import { FavoritesPage } from '../../pages/FavoritesPage/FavoritesPage.jsx'
-import { NotFoundPage } from '../../pages/NotFoundPage/NotFoundPage.jsx'
+import { HomePage } from "../../pages/HomePage/HomePage.jsx";
+import { CatalogPage } from "../../pages/CatalogPage/CatalogPage.jsx";
+import { FavoritesPage } from "../../pages/FavoritesPage/FavoritesPage.jsx";
+import { NotFoundPage } from "../../pages/NotFoundPage/NotFoundPage.jsx";
 
 import { Suspense } from "react";
 import { Route, Routes } from "react-router";
 import { Loader } from "../Loader/Loader.jsx";
+import { ScrollToTop } from "../ScrollToTop/ScrollToTop.jsx";
 
 // const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 // const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage.jsx"));
@@ -18,6 +19,7 @@ import { Loader } from "../Loader/Loader.jsx";
 function App() {
   return (
     <div className={css.app}>
+      <ScrollToTop />
       <Header>
         <Suspense fallback={<Loader />}>
           <Routes>

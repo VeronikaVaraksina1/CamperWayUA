@@ -1,5 +1,6 @@
 .modal {
   position: absolute;
+  z-index: 6;
   max-width: 982px;
   max-height: 90%;
   top: 50%;

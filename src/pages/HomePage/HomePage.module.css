@@ -1,0 +1,81 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: 76px;
+  padding-bottom: 20px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 1, 1, 0.3)
+  );
+}
+
+.imagesList {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+}
+
+.image {
+  width: 400px;
+  height: 290px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.listAndButtonContainer {
+  position: relative;
+}
+
+a.homeLinkCatalog {
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 127px);
+  width: 254px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.title > svg {
+  position: relative;
+  top: 4px;
+  right: 0;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 1024px;
+
+  fill: #FFC531;
+  stroke: #eca900;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.item > p {
+  width: 700px;
+}
