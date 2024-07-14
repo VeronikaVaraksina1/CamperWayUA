@@ -7,10 +7,10 @@ import { Route, Routes } from "react-router";
 import { Loader } from "../Loader/Loader.jsx";
 import { ScrollToTop } from "../ScrollToTop/ScrollToTop.jsx";
 
-const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
-const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage.jsx"));
-const FavoritesPage = lazy(() => import("../../pages/FavoritesPage/FavoritesPage.jsx"));
-const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage.jsx"));
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const CatalogPage = lazy(() => import("../../pages/CatalogPage/CatalogPage"));
+const FavoritesPage = lazy(() => import("../../pages/FavoritesPage/FavoritesPage"));
+const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFoundPage"));
 
 function App() {
   return (
