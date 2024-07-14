@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding-top: 76px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  height: 56px;
+  padding: 16px 40px;
+  border: 1px solid var(--border);
+  border-radius: 200px;
+  margin: 0 auto;
+  outline: transparent;
+
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+
+  background-color: var(--white);
+  transition: border 250ms ease-in, background-color 250ms ease-in;
+}
+
+.link:hover,
+.link:focus {
+  border: 1px solid var(--red);
+  background-color: var(--white);
+}

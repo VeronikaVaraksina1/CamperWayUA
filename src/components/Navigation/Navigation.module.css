@@ -24,3 +24,21 @@
 .logo {
   width: 43px;
 }
+
+.link {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--white);
+  transition: background-color 250ms ease-in, color 250ms ease-in;
+}
+
+.link:hover, .link:focus {
+  color: var(--black);
+  background-color: var(--red);
+}
+
+.isActive {
+  color: var(--black);
+  background-color: var(--red);
+}
