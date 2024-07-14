@@ -11,3 +11,16 @@
   font-weight: 600;
   line-height: 1.25;
 }
+
+.logoLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 43px;
+}

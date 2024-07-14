@@ -4,7 +4,7 @@ import { selectFavoriteAdverts } from "../../redux/adverts/selectors";
 import { CatalogLink } from "../../components/CatalogLink/CatalogLink";
 import { useSelector } from "react-redux";
 
-export const FavoritesPage = () => {
+const FavoritesPage = () => {
   const favorites = useSelector(selectFavoriteAdverts);
 
   return (
@@ -22,3 +22,5 @@ export const FavoritesPage = () => {
     </div>
   );
 };
+
+export default FavoritesPage;

@@ -8,13 +8,14 @@ import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store.js";
 import Modal from "react-modal";
 import { PersistGate } from "redux-persist/integration/react";
+import { Loader } from "./components/Loader/Loader.jsx";
 
 Modal.setAppElement("#root");
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={"...Loading"} persistor={persistor}>
+      <PersistGate loading={<Loader />} persistor={persistor}>
         <BrowserRouter>
           <App />
         </BrowserRouter>

@@ -5,7 +5,7 @@ import secondCamper from "../../images/breaking-bad-rv-2.jpg";
 import thirdCamper from "../../images/breaking-bad-rv-3.jpg";
 import { CatalogLink } from "../../components/CatalogLink/CatalogLink";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <div className={css.wrapper}>
       <h1 className={css.title}>
@@ -78,3 +78,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;

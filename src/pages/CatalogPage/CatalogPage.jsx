@@ -6,7 +6,7 @@ import { fetchAdverts } from "../../redux/adverts/operations";
 import { Button } from "../../components/Button/Button";
 import clsx from "clsx";
 
-export const CatalogPage = () => {
+const CatalogPage = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [loadMore, setLoadMore] = useState(true);
@@ -33,3 +33,5 @@ export const CatalogPage = () => {
     </div>
   )
 };
+
+export default CatalogPage;
